@@ -1,0 +1,4 @@
+File: startup.wav
+Source: http://www.freesound.org/people/unfa/sounds/170857/
+License: http://creativecommons.org/licenses/by/3.0/
+Notes: Converted from MP3 and clipped.
