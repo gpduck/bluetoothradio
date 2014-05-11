@@ -1,6 +1,8 @@
 [Unit]
 Description=Bluetooth Audio Server
-After=bluetooth.target
+After=pulseaudio.service
+Requires=pulseaudio.service
+Requires=bluetooth-agent.service
 
 [Service]
 ExecStart=/root/bluetoothradio/startup.sh
