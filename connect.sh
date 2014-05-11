@@ -74,6 +74,7 @@ disconnect() {
 
 main() {
 	echo "Waiting for connection..."
+	unmute
 	aplay /root/bluetoothradio/startup.wav
 	while :
 	do
