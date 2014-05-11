@@ -19,13 +19,13 @@ user="pi"
 
 unmute() {
 	echo "Unmuting"
-	su $user -c 'pacmd "set-sink-mute 0 0"'
+	su $user -c 'pactl "set-sink-mute 0 0"'
 	su $user -c 'pactl set-sink-volume 0 100%'
 }
 
 mute() {
 	echo "Muting"
-	su $user -c 'pacmd "set-sink-mute 0 1"'
+	su $user -c 'pactl "set-sink-mute 0 1"'
 }
 
 connect() {
