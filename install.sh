@@ -1,4 +1,4 @@
-sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2 bluez-tools qdbus git-core -y
+sudo apt-get install bluetooth bluez pulseaudio-module-bluetooth python-gobject python-gobject-2 bluez-tools qdbus git-core -y
 sudo usermod -a -G lp pi
 
 sudo sed -i '/\[General\]/c\\[General\]\nEnable=Source,Sink,Media,Socket' /etc/bluetooth/audio.conf
