@@ -3,8 +3,7 @@ Description=Bluetooth Audio Server
 After=bluetooth.target
 
 [Service]
-ExecStartPre=/bin/rm -f /var/log/bluetoothAudio.log
-ExecStart=/root/bluetoothradio/startup.sh &> /var/log/bluetoothAudio.log
+ExecStart=/root/bluetoothradio/startup.sh
 Restart=on-abort
 
 [Install]
