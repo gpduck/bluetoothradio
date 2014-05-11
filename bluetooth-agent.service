@@ -1,9 +1,12 @@
 [Unit]
 Description=Bluetooth PIN Agent
-After=bluetooth.target
+After=bluetooth.service
+Requires=bluetooth.service
 
 [Service]
-ExecStart=/usr/bin/bluetooth-agent $(cat /root/bluetoothaudio/bluetoothPin)
+ExecStart=/root/bluetoothaudio/agent.sh
+Restart=on-failure
+RestartSec=1s
 
 [Install]
 WantedBy=multi-user.target
