@@ -1,0 +1,11 @@
+[Unit]
+Description=PulseAudio
+
+[Service]
+Type=forking
+User=pi
+ExecStart=/usr/bin/pulseaudio --start
+ExecStop=/usr/bin/pulseaudio --kill
+
+[Install]
+WantedBy=multi-user.target
