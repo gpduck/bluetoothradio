@@ -10,3 +10,4 @@ sudo cp /root/bluetoothradio/systemd-logind.service /etc/systemd/system
 suco cp /root/bluetoothradio/pulseaudio.service /etc/systemd/system
 sudo systemctl enable bluetooth-server.service
 sudo systemctl enable pulseaudio.service
+sudo update-rc.d pulseaudio disable
