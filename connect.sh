@@ -12,7 +12,7 @@
 #---------------------------------------------------------------
 
 #clear
-rebootDisconnect=true #only enable this if a reboot of the pi is needed on disconnect
+rebootDisconnect=false #only enable this if a reboot of the pi is needed on disconnect
 paID=""
 qPath=""
 user="pi"
@@ -20,6 +20,7 @@ user="pi"
 unmute() {
 	echo "Unmuting"
 	su $user -c 'pacmd "set-sink-mute 0 0"'
+	su $user -c 'pactl set-sink-volume 0 100%'
 }
 
 mute() {
@@ -73,6 +74,7 @@ disconnect() {
 
 main() {
 	echo "Waiting for connection..."
+	aplay /root/bluetoothradio/startup.wav
 	while :
 	do
 		qPath="$(su $user -c 'pactl list' | grep -m 1 'Name: bluez_source' | cut -c 8-)"
