@@ -1,3 +1,4 @@
+#!/bin/bash
 # First configure the user you want to run this under - this will generally be pi, unless you've created your own users
 export USER='root'
 
