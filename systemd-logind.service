@@ -1,0 +1,4 @@
+.include /lib/systemd/system/systemd-logind.service
+
+[Service]
+Environment=SYSTEMD_LOG_LEVEL=warning
