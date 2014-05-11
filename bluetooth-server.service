@@ -5,7 +5,7 @@ Requires=pulseaudio.service
 Requires=bluetooth-agent.service
 
 [Service]
-ExecStart=/root/bluetoothradio/startup.sh
+ExecStart=/root/bluetoothradio/connect.sh
 Restart=on-abort
 
 [Install]
