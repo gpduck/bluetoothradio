@@ -73,6 +73,9 @@ disconnect() {
 }
 
 main() {
+	# Set up the bluetooth adapter to be as visible as possible.
+	hciconfig hci0 piscan
+	
 	echo "Waiting for connection..."
 	unmute
 	aplay /root/bluetoothradio/startup.wav &
