@@ -13,14 +13,14 @@ cd "$( cd -P $DIR && pwd )"
 #modprobe snd_bcm2835
 
 # Start pulseaudio
-su $user -c 'pulseaudio --start'
+#su $user -c 'pulseaudio --start'
 
 # Set up the bluetooth adapter to be as visible as possible.
 hciconfig hci0 piscan
 
 # Load a bluetooth agent to allow the pairing and connection, and to
 # Set pulseaudio up against the bluetooth connection.
-(./agent.sh) &
+#(./agent.sh) &
 
 ./connect.sh
 
