@@ -1,0 +1,9 @@
+[Unit]
+Description=Bluetooth PIN Agent
+After=bluetooth.target
+
+[Service]
+ExecStart=/usr/bin/bluetooth-agent $(cat /root/bluetoothaudio/bluetoothPin)
+
+[Install]
+WantedBy=multi-user.target
