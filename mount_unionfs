@@ -7,4 +7,9 @@ then
   mkdir /tempfs${DIR}
 fi
 
+if [ ! -e ${DIR} ]
+then
+  mkdir ${DIR}
+fi
+
 /usr/bin/unionfs-fuse -o cow,allow_other,nonempty /tempfs${DIR}=RW:${DIR}_ro=RO ${DIR}
