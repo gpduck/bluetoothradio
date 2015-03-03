@@ -9,7 +9,7 @@ case "$1" in
   start)
     # if it's start, then start bluetooth-server using the details below
     touch /var/log/bluetoothAudio.log
-    su root -c "./bluetoothradio/startup.sh &> /var/log/bluetoothAudio" &
+    su root -c "./bluetoothradio/connect.sh &> /var/log/bluetoothAudio" &
     ;;
   *)
     echo "Usage: /etc/init.d/bluetooth-server {start}"
