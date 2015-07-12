@@ -1,5 +1,6 @@
 sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2 -y
-sudo usermod -a -G lp pi
+sudo adduser pulse audio
+sudo adduser pulse lp
 
 sudo sed -i '/\[General\]/c\\[General\]\nEnable=Source,Sink,Media,Socket' /etc/bluetooth/audio.conf
 sudo sed -i '/; resample-method = speex-float-3/c\resample-method = trivial' /etc/pulse/daemon.conf
