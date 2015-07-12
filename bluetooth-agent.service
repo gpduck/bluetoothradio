@@ -4,7 +4,7 @@ After=bluetooth.service
 Requires=bluetooth.service
 
 [Service]
-ExecStart=/root/bluetoothradio/agent.sh
+ExecStart=/usr/lib/bluetoothradio/agent.sh
 Restart=on-failure
 RestartSec=1s
 
