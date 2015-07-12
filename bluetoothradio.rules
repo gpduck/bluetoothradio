@@ -1,1 +1,1 @@
-ACTION=="add", SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]*:[0-9]+", RUN+="/usr/lib/bluetoothradio/udevevent.sh %k"
+SUBSYSTEM=="bluetooth", KERNEL=="hci[0-9]*:[0-9]", RUN+="/usr/lib/bluetoothradio/udevevent.sh %k"
