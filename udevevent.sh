@@ -4,6 +4,7 @@ hci="$(echo $0 | grep -o "hci[0-9]\+")"
 dbus="$(qdbus --system org.bluez | grep -m 1 "${hci}/dev_")"
 mac="$(echo $dbus | rev | cut -c -17 | rev)"
 bluezSource="bluez_source.${mac}"
+logger --tag bluetoothradio "${ACTION} event for ${bluezSource}"
 case "$ACTION" in
 	add)
 		pactl "set-sink-mute 0 1"
