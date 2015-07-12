@@ -14,7 +14,7 @@ sudo cp systemd-logind.service /etc/systemd/system
 
 sudo cp pulseaudio.service /etc/systemd/system
 
-suco cp agent.sh /usr/lib/bluetoothradio/
+sudo cp agent.sh /usr/lib/bluetoothradio/
 sudo cp bluetooth-agent.service /etc/systemd/system
 
 sudo systemctl enable bluetooth-server.service
