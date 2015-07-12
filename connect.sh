@@ -78,7 +78,7 @@ main() {
 	
 	echo "Waiting for connection..."
 	unmute
-	aplay /root/bluetoothradio/startup.wav &
+	aplay /usr/lib/bluetoothradio/startup.wav &
 	while :
 	do
 		qPath="$(su $user -c 'pactl list' | grep -m 1 'Name: bluez_source' | cut -c 8-)"
