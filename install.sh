@@ -6,7 +6,7 @@ sudo sed -i '/\[General\]/c\\[General\]\nEnable=Source,Sink,Media,Socket' /etc/b
 sudo sed -i '/; resample-method = speex-float-3/c\resample-method = trivial' /etc/pulse/daemon.conf
 
 cp /etc/pulse/system.pa /tmp/system.pa
-cat << EOF > /tmp/system.pa
+cat << EOF >> /tmp/system.pa
 
 .ifexists module-bluetooth-discover.so
   load-module module-bluetooth-discover
