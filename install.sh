@@ -1,4 +1,4 @@
-sudo apt-get install bluez pulseaudio-module-bluetooth python-gobject python-gobject-2 -y
+sudo apt-get install bluez bluez-tools pulseaudio-module-bluetooth python-gobject python-gobject-2 -y
 sudo adduser pulse audio
 sudo adduser pulse lp
 
